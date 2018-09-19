@@ -40,10 +40,51 @@
                 </mat-slide-toggle>
 
             </div>
+        </mat-card-content>
+		
+        <mat-card-header>
+            <mat-card-title>News Categories</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="verticalContainer">
+                <mat-slide-toggle [checked]="displayOptions.general"
+                                    (change)="displayOptions.general = $event.source.checked">
+                    general
+                </mat-slide-toggle>
+                <mat-slide-toggle [checked]="displayOptions.mining"
+                                  (change)="displayOptions.mining = $event.source.checked">
+                    mining
+                </mat-slide-toggle>
+                <mat-slide-toggle [checked]="displayOptions.ICO"
+                                  (change)="displayOptions.ICO = $event.source.checked">
+                    ICO
+                </mat-slide-toggle>
+            </div>
+        </mat-card-content>
+
+        <mat-card-header>
+            <mat-card-title>News Coins</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="verticalContainer">
+                <mat-slide-toggle [checked]="displayOptions.bitcoin"
+                                  (change)="displayOptions.bitcoin = $event.source.checked">
+                    bitcoin
+                </mat-slide-toggle>
+                <mat-slide-toggle [checked]="displayOptions.ethereum"
+                                  (change)="displayOptions.ethereum = $event.source.checked">
+                    ethereum
+                </mat-slide-toggle>
+                <mat-slide-toggle [checked]="displayOptions.bitclave"
+                                  (change)="displayOptions.bitclave = $event.source.checked">
+                    bitclave
+                </mat-slide-toggle>
+            </div>
             <mat-card-actions align="end">
-              <button color="primary" (click)="saveDisplayOptions()" mat-button>Save Options</button>
+                <button color="primary" (click)="saveDisplayOptions()" mat-button>Save Options</button>
             </mat-card-actions>
         </mat-card-content>
+		
     </mat-card>
 
     <mat-card>

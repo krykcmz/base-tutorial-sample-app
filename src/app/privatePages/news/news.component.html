@@ -1,0 +1,44 @@
+<div class="wrapper-landing">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 news-page">
+                <div class="row">
+
+                    <div class="mat-card" *ngIf="offer">
+                        <em class="green">{{offer.worth}} CAT</em>
+                        <h3>
+                            {{offer.title}}
+                        </h3>
+                        <p>
+                            {{offer.description}}
+                        </p>
+                            <button color="primary" mat-button>
+                            Read More
+                            </button>
+                    </div>
+
+                    <div class="mat-card" *ngFor="let article of articles">
+                        <h3>
+                                {{article.title}}
+                        </h3>
+                        <div class="news-block-tags">
+                            Category: <strong>{{article.primaryCategory}}</strong>
+                            <br />
+                            Coins: <em *ngFor="let coin of article.coins">{{coin.name}} </em>
+                        </div>
+                        <p>
+                            <img class="news-block-img pull-right" src="{{article.thumbnail}}" alt="">
+                            {{article.description}}
+                        </p>
+                        <div class="news-block-tags">
+                            <strong>{{article.sourceDomain}}</strong>
+                        </div>
+                        <button color="primary" mat-button>
+                            Read more
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

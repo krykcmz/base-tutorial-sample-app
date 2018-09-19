@@ -12,6 +12,7 @@ import { SettingsModule } from './privatePages/settings/settings.module';
 
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
+import { NewsModule } from './privatePages/news/news.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     CabinetModule,
     MatProgressSpinnerModule,
     DashboardModule,
-    SettingsModule
+    SettingsModule,
+	NewsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

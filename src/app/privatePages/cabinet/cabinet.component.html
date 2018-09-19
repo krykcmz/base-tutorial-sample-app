@@ -56,6 +56,13 @@
           <span *ngIf="!isCompactMenu" class="cabinet-navigation">Settings</span>
         </mat-list-item>
       </mat-nav-list>
+	  
+	<mat-nav-list>
+		<mat-list-item [class.cursorHere]="(menuItem | async) === 'news'" routerLink="/cabinet/news">
+			<mat-icon class="navigation dashboard" svgIcon="wallet"></mat-icon>
+			<span *ngIf="!isCompactMenu" class="cabinet-navigation">News</span>
+		</mat-list-item>
+	</mat-nav-list>
     </div>
 
     <button mat-button class="button_togle_sidebar" (click)="transformSideNav()"><span><</span></button> -->
